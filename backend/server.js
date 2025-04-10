@@ -80,4 +80,18 @@ app.post('/form', async (req, res) => {
     }
 });
 
+app.get('/form', async(req, res) =>{
+    try {
+        const sql = 'SELECT * FROM form_submissions';
+        db.query(sql, (err, results) => {
+            if (err) {
+                console.error('Database error:', err);
+            }
+            res.json(results);
+        })
+    }catch(err){
+        console.error('Server error:', err);
+    }
+})
+
 app.listen(PORT, () => console.log(`Server is running at PORT: ${PORT}`));

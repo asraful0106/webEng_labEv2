@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Data Analysis</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>User Data Analysis</h1>
+        <div class="nav-links">
+            <a href="index.html" class="nav-btn">Registration</a>
+            <a href="display.html" class="nav-btn">User List</a>
+        </div>
+
+        <div class="stats-section">
+            <h2>Summary Statistics</h2>
+            <div class="stats-grid">
+                <div class="stat-card" id="totalUsers">
+                    <h3>Total Users</h3>
+                    <p class="stat-value">0</p>
+                </div>
+                <div class="stat-card" id="genderDistribution">
+                    <h3>Gender Distribution</h3>
+                    <p class="stat-value">Loading...</p>
+                </div>
+                <div class="stat-card" id="popularCourse">
+                    <h3>Most Popular Course</h3>
+                    <p class="stat-value">Loading...</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="chart-section">
+            <h2>Data Visualizations</h2>
+            <div class="chart-container">
+                <canvas id="genderChart"></canvas>
+            </div>
+            <div class="chart-container">
+                <canvas id="coursesChart"></canvas>
+            </div>
+        </div>
+
+        <div class="data-table">
+            <h2>Detailed Data</h2>
+            <table id="usersTable">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Gender</th>
+                        <th>Completed Courses</th>
+                        <th>Favorite Course</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+    <script src="data-analysis.js"></script>
+</body>
+</html>
